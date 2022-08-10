@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:foregroundGravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--TextView: Display whether bluetooth is available or not-->
+
+    <ImageView
+        android:id="@+id/target"
+        android:layout_width="88dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/target4"
+        android:contentDescription="@string/target_logo" />
+
+    <Button
+        android:id="@+id/turnOnBtn"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="144dp"
+        android:backgroundTint="#832A2A"
+        android:text="@string/turn_on"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/turnOffBtn"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#832A2A"
+        android:text="@string/turn_off"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turnOnBtn" />
+
+    <ImageButton
+        android:id="@+id/scanBtn"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/scan"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discoverBtn"
+        app:srcCompat="@drawable/bluetooth" />
+
+    <Button
+        android:id="@+id/discoverBtn"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+
+        android:backgroundTint="#832A2A"
+        android:text="@string/find_me"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turnOffBtn" />
+
+
+
+    <TextView
+        android:id="@+id/btStatusTv"
+        android:layout_width="162dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btImg" />
+
+    <ImageView
+        android:id="@+id/btImg"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/bluetooth_icon"
+        android:src="@drawable/ic_bluetooth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanBtn"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+
+            android:id="@+id/bleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical"
+            android:verticalScrollbarPosition="left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanBtn" />
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

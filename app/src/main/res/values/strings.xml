@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bluetooth DEV</string>
+    <string name="turn_on">Enable Bluetooth</string>
+    <string name="turn_off">Disable Bluetooth</string>
+    <string name="scan">Scan For BLE Devices</string>
+    <string name="find_me">Make Device Discoverable</string>
+    <string name="bluetooth_icon">Bluetooth Icon</string>
+    <string name="bluetooth_Av">Bluetooth enabled</string>
+    <string name="bluetooth_nAv">Bluetooth not enabled</string>
+    <string name="ble_list">List of BLE devices</string>
+    <string name="target_logo">Target logo</string>
+</resources>
